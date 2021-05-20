@@ -1,7 +1,7 @@
 import './App.css';
 import RecipeForm from './components/RecipeForm'
 import RecipeList from './components/RecipeList'
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from 'axios';
 
 
@@ -36,15 +36,12 @@ function App() {
     postNewRecipe(url);
     console.log(recipes);
   };
-
-  const url = 'https://www.budgetbytes.com/easy-vegetarian-minestrone/'
-  
   
 
   const inputChange = (name, value) => {
     setFormValues({
       ...formValues,
-      [name]: value, // NOT AN ARRAY
+      [name]: value,
     });
   }
 
